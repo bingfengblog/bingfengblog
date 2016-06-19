@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+  {% block content %}
+
+                 {% for post in blog_list %}
+                        <div class="post">
+                            <h2><strong><a href="{% url 'blog.views.post_detail' pk=post.pk %}">{{  post.title }}</a></strong></h2>
+                            <p><span class="glyphicon glyphicon-calendar">{{ post.published_date|date:"Y-m-d"}}</span></p>
+                            <div>
+                            <p>{{ post.text|safe|truncatewords:50}}</p>
+                            </div>
+                            <span><a class="save btn btn-success btn-sm" role="button" href="{% url 'blog.views.post_detail' pk=post.pk %}">阅读更多>></a></span>
+                        </div>
+                 {% endfor %}
+      {% if page %}
+
+                    <ul class="pagination">
+                            {% if blog_list.has_previous %}
+                                <li class="previous" ><a href="?page={{ blog_list.previous_page_number }}">上一页</a></li>
+
+                            {% else %}
+                                <li class="previous disabled"><a>上一页</a></li>
+
+                            {% endif %}
+
+                               {% for p in page_range %}
+                                      {% ifequal p blog_list.number %}
+                                            <li class="active"><a href="?page={{ p }}">{{ p }}</a></li>
+                                      {% else %}
+                                      <li><a href="?page={{ p }}">{{ p }}</a></li>
+                                      {% endifequal %}
+                               {% endfor %}
+
+
+                            {% if blog_list.has_next %}
+                                <li class="next" ><a href="?page={{ blog_list.next_page_number }}">下一页</a></li>
+                            {% else %}
+                                <li class="next disabled"><a>下一页</a></li>
+                            {% endif %}
+
+                            <p>Page {{ blog_list.number }} of {{ blog_list.paginator.num_pages }}</p>
+
+
+      {% endif %}
+
+  {% endblock %}
+
+

@@ -1,0 +1,94 @@
+.page-header {
+    background-color: #1d915c;
+    margin-top: 0;
+    padding: 20px 80px 40px 80px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+    display: inline;
+}
+
+.content {
+    margin-top: 55px;
+    margin-left: 200px;
+    margin-right: 150px;
+
+}
+.col-md-8{
+     margin-top: 10px;
+     padding-right: 40px;
+
+
+}
+.col-md-2{
+
+     padding-left: 40px;
+     margin-top: 30px;
+     border-left: 1px solid #bad4eb;
+}
+.col-md-2 .lanmu{
+    color:#8095a8;
+}
+.col-md-2 .fennei,.biaoqian,.remen {
+    border-top: 1px solid #bad4eb;
+    /*border-bottom: 1px solid #bad4eb;*/
+    height: 150px;
+    margin-bottom: 30px;
+}
+/*.col-md-4 .biaoqian {*/
+    /*border-top: 1px solid #bad4eb;*/
+    /*/!*border-bottom: 1px solid #bad4eb;*!/*/
+    /*height: 200px;*/
+    /*margin-bottom: 30px;*/
+/*}*/
+/*.col-md-4 .remen {*/
+    /*border-top: 1px solid #bad4eb;*/
+    /*/!*border-bottom: 1px solid #bad4eb;*!/*/
+    /*height: 200px;*/
+    /*padding-bottom: 30px;*/
+/*}*/
+
+.content h1 {
+    display: inline;
+}
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+/*.test{*/
+    /*float:left*/
+/*}*/
+.date {
+    float: right;
+    color: #326b91;
+}
+.save {
+    float: right;
+}
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+/*.top-menu, .top-menu:hover, .top-menu:visited {*/
+    /*/!*color: #ffffff;*!/*/
+    /*float: right;*/
+    /*font-size: 14pt;*/
+    /*padding-right: 10px;*/
+/*}*/
+.post {
+    margin-bottom: 70px;
+}
+.post h2 a, .post h2 a:visited {
+    font-weight:bolder;
+}
+.post button a {
+    color:#0f8849;
+}
+
+/*.contain{*/
+/*width:100px;*/
+/*height:100px;*/
+/*border:1px solid #CCC;*/
+/*}*/
+
